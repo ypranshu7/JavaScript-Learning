@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event <Code></Code></title>
+</head>
+<body  >
+    <ul id="images">
+        <li><img src=" https://i.pinimg.com/736x/30/19/4e/30194e24f83e6de17913aab6c91e64f6.jpg" alt="" id="sun" style="width: 300px; height: 300px;"></li>
+        <li><img src="https://images.pexels.com/photos/459225/pexels-photo-459225.jpeg?cs=srgb&dl=daylight-environment-forest-459225.jpg&fm=jpg" alt="" id="nature" style="width: 500px;"></li>
+    </ul>
+</body>
+<script>
+    //   document.getElementById('nature').onclick=function(){
+    //     alert('click nature')
+    //   }
+    // attachEvent()
+    // jQuery-on
+      
+    //   type,timestamp,defaultPrevented
+    // target,toElement,srcElement,currentTarget
+    // clientX,clientY,screenX,screenY
+    // altKey,cltKey,shiftKey,keyCode
+      
+    // document.getElementById('images').addEventListener('click',function(e){
+    //    console.log("click inside the ul")
+    //   },false)
+    // document.getElementById('nature').addEventListener('click',function(e){
+    //    console.log('nature click')
+    //      e.stopPropagation()  
+    //   },false)
+     
+     document.querySelector("#images").addEventListener('click',function(e){
+             console.log(e.target.tagName)
+             if(e.target.tagName==='IMG'){
+                console.log(e.target.id)
+                let removeIt=e.target.parentNode
+                removeIt.remove()
+             }
+        },false)
+        // removeIt.parentNode.removeChild(removeIt)
+     
+</script> 
+
+</html>
